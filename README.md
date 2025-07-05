@@ -1,52 +1,67 @@
+# 🗑️ Garbage Classification – Week 1
 
+This repository contains the Week 1 deliverables for the **Shell-Edunet Skills4Future Internship Project – Garbage Classification**.
 
-````markdown
-# Garbage Classification - Week 1 (Shell-Edunet Internship)
+## 📌 Objective
 
-This is the Week 1 submission for the Shell-Edunet Skills4Future Internship (Project P4: Garbage Classification). The goal is to classify garbage images into multiple categories using a Convolutional Neural Network (CNN) model.
+To develop a Convolutional Neural Network (CNN) model that classifies garbage images into six categories:
+- **Cardboard**
+- **Glass**
+- **Metal**
+- **Paper**
+- **Plastic**
+- **Trash**
 
-## 📁 Files in this Repository
+## 📂 Dataset
 
-- `garbage_classification_week1.ipynb` - Jupyter Notebook containing the full model building, training, and evaluation.
-- `garbage_classifier_model.h5` - The trained CNN model file.
-- `.gitattributes` - Git LFS tracking for large files.
+- The dataset was provided in `.zip` format containing labeled folders for each garbage category.
+- It was uploaded to **Google Drive**, extracted, and used via **Google Colab**.
 
-## 📊 Dataset
+## 🧠 Model Architecture
 
-The dataset used consists of garbage images organized into different categories like paper, metal, plastic, etc.
+A custom CNN model was built using:
+- `Conv2D`, `MaxPooling2D`
+- `Dropout`, `Flatten`, `Dense` layers
+- ReLU and softmax activation functions
 
-## 🧠 Model Details
+> ✅ Image input size: `(128, 128, 3)`
 
-- **Architecture:** CNN (Convolutional Neural Network)
-- **Framework:** TensorFlow/Keras
-- **Accuracy Achieved:** ~90% validation accuracy
+## 🏗️ Workflow
 
-## 🛠️ How to Use
+1. **Mount Google Drive**
+2. **Extract dataset**
+3. **Create image generators for training & validation**
+4. **Build and compile CNN model**
+5. **Train model and visualize accuracy**
+6. **Evaluate on validation data**
+7. **Save trained model as `.h5`**
 
-1. Clone the repository:
+## 📈 Performance
 
-```bash
-git clone https://github.com/Mdyaqoob153/Garbage-Classification-Week1.git
-````
+- **Validation Accuracy**: ~65%
+- **Loss**: 1.56 (on validation set)
 
-2. Open the notebook in Google Colab or Jupyter.
-3. Run the cells to understand the pipeline and predictions.
-4. Load the model using:
+## 💾 Files Included
 
-```python
-from keras.models import load_model
-model = load_model('garbage_classifier_model.h5')
-```
+- `Week1_Garbage_Classification.ipynb`: Google Colab notebook
+- `garbage_classifier_model.h5`: Trained model
+- `README.md`: Project documentation
+- `improvisations.txt`: Ideas for improvement (Week 2)
 
-## 🔗 External Files
+## 📌 Tools & Libraries
 
-* [📓 Colab Notebook](https://drive.google.com/open?id=11KM2f5hJVBJwgN-zkTsRnoEdahn--so0)
-* [📥 Trained Model (.h5)](https://drive.google.com/open?id=1rC4dk1UzmkAu8z-eIdEDnwYJ-kh7b7jT)
+- Python, TensorFlow, Keras
+- Matplotlib, NumPy, Google Colab
 
-```
+## 📌 Key Takeaways
+
+- Understood the pipeline of training a deep learning model
+- Preprocessed real-world image data
+- Visualized model performance with accuracy/loss plots
+- Saved and exported a trained `.h5` model for later use
 
 ---
 
-✅ **Now you can copy–paste this into `README.md` and click "Commit changes".**  
-Let me know once done — or if you want me to help you write the `improvisations.txt` file next!
-```
+### 🚀 Next Step (Week 2)
+The trained model will be used in Week 2 to classify custom uploaded images and test generalization.
+
