@@ -1,0 +1,7 @@
+Week 2 – Improvisations over Week 1:
+
+1. Instead of training a new model, we reused the trained model from Week 1.
+2. Used OpenCV to load and preprocess a new test image.
+3. Used matplotlib to display the image along with the predicted label.
+4. Created a clear separation between training (Week 1) and prediction (Week 2).
+5. Validated model generalization by testing on an unseen image.
